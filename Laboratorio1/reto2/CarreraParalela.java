@@ -6,6 +6,8 @@ public class CarreraParalela {
         int maximo;
         int minimo;
         long cantidad;
+        boolean maximoEsMultiploDe2;
+        boolean cantidadEsPar;
 
         @Override
         public String toString() {
@@ -24,6 +26,11 @@ public class CarreraParalela {
             res.maximo = 0;
             res.minimo = 0;
             res.cantidad = 0;
+
+            // ternario (cumplir enunciado)
+            res.maximoEsMultiploDe2 = (res.maximo % 2 == 0) ? true : false;
+            res.cantidadEsPar = (res.cantidad % 2 == 0) ? true : false;
+
             return res;
         }
 
@@ -31,7 +38,15 @@ public class CarreraParalela {
         res.minimo = lista.stream().min(Integer::compareTo).orElse(0);
         res.cantidad = lista.size();
 
+        //  Segunda vuelta
+        res.maximoEsMultiploDe2 = (res.maximo % 2 == 0) ? true : false;
+
+        //  Tercer choque
+        res.cantidadEsPar = (res.cantidad % 2 == 0) ? true : false;
+
         return res;
+
+
     }
 
     public static void main(String[] args) {
