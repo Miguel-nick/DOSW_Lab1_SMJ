@@ -7,6 +7,7 @@ public class CarreraParalela {
         int minimo;
         long cantidad;
         boolean esDivisorDe2; 
+        boolean esImpar; 
 
         @Override
         public String toString() {
@@ -33,6 +34,8 @@ public class CarreraParalela {
         res.cantidad = lista.size();
 
         res.esDivisorDe2 = (res.maximo != 0) ? (2 % res.maximo == 0) : false;
+
+        res.esImpar = (res.cantidad % 2 != 0) ? true : false;
 
         return res;
     }
