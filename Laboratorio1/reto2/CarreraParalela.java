@@ -6,6 +6,7 @@ public class CarreraParalela {
         int maximo;
         int minimo;
         long cantidad;
+        boolean esDivisorDe2; 
 
         @Override
         public String toString() {
@@ -30,6 +31,8 @@ public class CarreraParalela {
         res.maximo = lista.stream().max(Integer::compareTo).orElse(0);
         res.minimo = lista.stream().min(Integer::compareTo).orElse(0);
         res.cantidad = lista.size();
+
+        res.esDivisorDe2 = (res.maximo != 0) ? (2 % res.maximo == 0) : false;
 
         return res;
     }
