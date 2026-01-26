@@ -33,7 +33,5 @@ Se trabajó de manera colaborativa realizando commits desde diferentes ramas, in
 
 ## Preguntas teóricas
 
-**Pregunta 1:** ¿Qué es una rama en Git?  
-**Respuesta:**  
-Una rama en Git es una línea independiente de desarrollo que permite trabajar en nuevas funcionalidades sin afectar la rama principal del proyecto.
+
  
