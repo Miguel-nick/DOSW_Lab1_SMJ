@@ -9,7 +9,7 @@ public class Reto4 {
         return map;
     }
     
-    
+
     public static Hashtable<String, Integer> poblarHashtable(List<Map.Entry<String, Integer>> pares) {
         Hashtable<String, Integer> mapa = new Hashtable<>();
         for (Map.Entry<String, Integer> par : pares) {
@@ -18,6 +18,18 @@ public class Reto4 {
             }
         }
         return mapa;
+    }
+    
+    public static Map<String, Integer> combinarMapas(HashMap<String, Integer> hashMap, 
+                                                       Hashtable<String, Integer> hashtable) {
+        Map<String, Integer> combinado = new HashMap<>(hashMap);
+        
+
+        for (Map.Entry<String, Integer> entry : hashtable.entrySet()) {
+            combinado.put(entry.getKey(), entry.getValue());
+        }
+        
+        return combinado;
     }
     
     public static void main(String[] args) {
@@ -40,5 +52,8 @@ public class Reto4 {
         );
         Hashtable<String, Integer> ht = poblarHashtable(entradaHashtable);
         System.out.println("Hashtable: " + ht);
+        
+        Map<String, Integer> resultado = combinarMapas(hm, ht);
+        System.out.println("Combinado (prioridad Hashtable): " + resultado);
     }
 }
