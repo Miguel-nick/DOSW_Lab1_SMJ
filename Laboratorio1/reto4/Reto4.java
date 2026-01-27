@@ -42,8 +42,31 @@ public class Reto4 {
                 .forEach(entry -> System.out.println("Clave: " + entry.getKey() + 
                                                      " | Valor: " + entry.getValue()));
     }
+
+    public static void procesarYMostrarTesoro(HashMap<String, Integer> hashMap, 
+                                               Hashtable<String, Integer> hashtable) {
+        System.out.println("\n=== TESORO FINAL (combinado, mayúsculas, ordenado) ===");
+        
+
+        Map<String, Integer> tesoroFinal = Stream.concat(
+                hashMap.entrySet().stream(),
+                hashtable.entrySet().stream()
+        )
+        .collect(Collectors.toMap(
+                entry -> entry.getKey().toUpperCase(),  
+                Map.Entry::getValue,                     
+                (v1, v2) -> v2,                         
+                TreeMap::new                             
+        ));
+        
     
-    public static void main(String[] args) {
+        tesoroFinal.forEach((key, value) -> 
+            System.out.println("Clave: " + key + " | Valor: " + value)
+        );
+    }
+
+
+        public static void main(String[] args) {
         // Prueba HashMap
         List<Map.Entry<String, Integer>> entradaHashMap = Arrays.asList(
                 Map.entry("oro", 5),
@@ -67,8 +90,10 @@ public class Reto4 {
         Map<String, Integer> resultado = combinarMapas(hm, ht);
         System.out.println("Combinado (prioridad Hashtable): " + resultado);
         
-
         imprimirMayusculas(resultado);
         imprimirOrdenado(resultado);
+
+        procesarYMostrarTesoro(hm, ht);
     }
+
 }
