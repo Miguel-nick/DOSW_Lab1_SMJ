@@ -43,7 +43,7 @@ public class Reto4 {
                                                      " | Valor: " + entry.getValue()));
     }
 
-<<<<<<< HEAD
+
     public static void procesarYMostrarTesoro(HashMap<String, Integer> hashMap, 
                                                Hashtable<String, Integer> hashtable) {
         System.out.println("\n=== TESORO FINAL (combinado, mayúsculas, ordenado) ===");
