@@ -27,6 +27,13 @@ public class Reto4 {
         
         return combinado;
     }
+
+    public static void imprimirMayusculas(Map<String, Integer> mapa) {
+        System.out.println("=== Mapa con claves en MAYÚSCULAS ===");
+        mapa.forEach((key, value) ->
+                System.out.println("Clave: " + key.toUpperCase() + " | Valor: " + value)
+        );
+    }
     
     public static void main(String[] args) {
         // Prueba HashMap
@@ -51,5 +58,7 @@ public class Reto4 {
         
         Map<String, Integer> resultado = combinarMapas(hm, ht);
         System.out.println("Combinado (prioridad Hashtable): " + resultado);
+        imprimirMayusculas(resultado);
+
     }
 }
