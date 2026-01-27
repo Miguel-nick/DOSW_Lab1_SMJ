@@ -43,6 +43,7 @@ public class Reto4 {
                                                      " | Valor: " + entry.getValue()));
     }
 
+<<<<<<< HEAD
     public static void procesarYMostrarTesoro(HashMap<String, Integer> hashMap, 
                                                Hashtable<String, Integer> hashtable) {
         System.out.println("\n=== TESORO FINAL (combinado, mayúsculas, ordenado) ===");
@@ -68,6 +69,32 @@ public class Reto4 {
 
         public static void main(String[] args) {
         // Prueba HashMap
+
+    public static void procesarYMostrarTesoro(HashMap<String, Integer> hashMap,
+                                              Hashtable<String, Integer> hashtable) {
+        System.out.println("\n=== TESORO FINAL (combinado, mayúsculas, ordenado) ===");
+
+
+        Map<String, Integer> tesoroFinal = Stream.concat(
+                        hashMap.entrySet().stream(),
+                        hashtable.entrySet().stream()
+                )
+                .collect(Collectors.toMap(
+                        entry -> entry.getKey().toUpperCase(),
+                        Map.Entry::getValue,
+                        (v1, v2) -> v2,
+                        TreeMap::new
+                ));
+
+
+        tesoroFinal.forEach((key, value) ->
+                System.out.println("Clave: " + key + " | Valor: " + value)
+        );
+    }
+
+    public static void main(String[] args) {
+
+
         List<Map.Entry<String, Integer>> entradaHashMap = Arrays.asList(
                 Map.entry("oro", 5),
                 Map.entry("plata", 3),
@@ -76,8 +103,7 @@ public class Reto4 {
         );
         HashMap<String, Integer> hm = poblarHashMap(entradaHashMap);
         System.out.println("HashMap: " + hm);
-        
-        // Prueba Hashtable
+
         List<Map.Entry<String, Integer>> entradaHashtable = Arrays.asList(
                 Map.entry("plata", 8),
                 Map.entry("rubí", 4),
@@ -86,10 +112,9 @@ public class Reto4 {
         );
         Hashtable<String, Integer> ht = poblarHashtable(entradaHashtable);
         System.out.println("Hashtable: " + ht);
-        
         Map<String, Integer> resultado = combinarMapas(hm, ht);
         System.out.println("Combinado (prioridad Hashtable): " + resultado);
-        
+
         imprimirMayusculas(resultado);
         imprimirOrdenado(resultado);
 
