@@ -27,8 +27,16 @@ public class Reto4 {
         
         return combinado;
     }
+
+    public static void imprimirOrdenado(Map<String, Integer> mapa) {
+        System.out.println("=== Mapa ordenado por clave (ascendente) ===");
+        mapa.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(entry -> System.out.println("Clave: " + entry.getKey() + 
+                                                     " | Valor: " + entry.getValue()));
+    }
     
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         // Prueba HashMap
         List<Map.Entry<String, Integer>> entradaHashMap = Arrays.asList(
                 Map.entry("oro", 5),
@@ -51,5 +59,8 @@ public class Reto4 {
         
         Map<String, Integer> resultado = combinarMapas(hm, ht);
         System.out.println("Combinado (prioridad Hashtable): " + resultado);
+        
+        imprimirOrdenado(resultado);
     }
+
 }
