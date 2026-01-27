@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Reto4 {
 
-    // Método HashMap usando Map.Entry (igual que Sebastian)
+
     public static HashMap<String, Integer> poblarMapa(List<Map.Entry<String, Integer>> pares) {
         HashMap<String, Integer> map = new HashMap<>();
         pares.stream()
