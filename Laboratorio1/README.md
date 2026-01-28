@@ -58,7 +58,7 @@ Se trabajo de manera ordenada para cada uno de los demas retos, algunos pedian v
 
 ## Organizacion
 
-- Disponibilidad para reunirse los findes de semana
+- Disponibilidad para reunirse los sabados y domingos
 - Aporte de ideas y trabajo colaborativo entre los 3 integrantes
 - No es malo no saber, siempre preguntar lo que no sepamos
 - Pausas activas, en el sentido de cuando nos encontremos estancados
