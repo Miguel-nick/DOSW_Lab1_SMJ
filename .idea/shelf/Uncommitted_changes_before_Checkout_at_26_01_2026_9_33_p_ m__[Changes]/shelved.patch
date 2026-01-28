@@ -1,0 +1,22 @@
+Index: src/Reto3.java
+===================================================================
+diff --git a/src/Reto3.java b/src/Reto3.java
+deleted file mode 100644
+--- a/src/Reto3.java	(revision a2a6d54bcb7bcd9ea4f5dbce0e269294db62f756)
++++ /dev/null	(revision a2a6d54bcb7bcd9ea4f5dbce0e269294db62f756)
+@@ -1,15 +0,0 @@
+-import java.util.stream.IntStream;
+-
+-
+-    public static String tranformar(String mensaje) {
+-        IntStream.range(0, 3)
+-                    if (i > 0) menB.append(" ");
+-                    menB.append(mensaje);
+-                });
+-        return menB.toString();
+-    }
+-    public static void main(String[] args) {
+-
+-        System.out.println(f.apply("Hola"));
+-
+-    }
