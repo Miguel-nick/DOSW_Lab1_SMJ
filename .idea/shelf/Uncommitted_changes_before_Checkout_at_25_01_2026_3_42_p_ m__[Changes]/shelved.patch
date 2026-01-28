@@ -1,0 +1,68 @@
+Index: Laboratorio1/reto2/CarreraParalela.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.List;\r\n\r\npublic class CarreraParalela {\r\n\r\n\r\n    public static class Resultado {\r\n        int maximo;\r\n        int minimo;\r\n        long cantidad;\r\n\r\n        @Override\r\n        public String toString() {\r\n            return \"Resultado{\" +\r\n                    \"maximo=\" + maximo +\r\n                    \", minimo=\" + minimo +\r\n                    \", cantidad=\" + cantidad +\r\n                    '}';\r\n        }\r\n    }\r\n\r\n    public static Resultado combinarResultados(List<Integer> lista) {\r\n        Resultado res = new Resultado();\r\n\r\n\r\n        if (lista == null || lista.isEmpty()) {\r\n            res.maximo = 0;\r\n            res.minimo = 0;\r\n            res.cantidad = 0;\r\n            return res;\r\n        }\r\n\r\n\r\n        res.maximo = lista.stream()\r\n                .max(Integer::compareTo)\r\n                .orElse(0);\r\n\r\n\r\n        res.minimo = lista.stream()\r\n                .min(Integer::compareTo)\r\n                .orElse(0);\r\n\r\n\r\n        res.cantidad = lista.size();\r\n\r\n        return res;\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        List<Integer> arr = List.of(45, 33, 345, 78, 7);\r\n\r\n        Resultado r = combinarResultados(arr);\r\n        System.out.println(r);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Laboratorio1/reto2/CarreraParalela.java b/Laboratorio1/reto2/CarreraParalela.java
+--- a/Laboratorio1/reto2/CarreraParalela.java	(revision 97a271bbc46c8cdcf727d63c40f0106d167044f4)
++++ b/Laboratorio1/reto2/CarreraParalela.java	(date 1769373693259)
+@@ -2,12 +2,12 @@
+ 
+ public class CarreraParalela {
+ 
+-
+     public static class Resultado {
+         int maximo;
+         int minimo;
+         long cantidad;
+ 
++
+         @Override
+         public String toString() {
+             return "Resultado{" +
+@@ -21,34 +21,28 @@
+     public static Resultado combinarResultados(List<Integer> lista) {
+         Resultado res = new Resultado();
+ 
+-
+         if (lista == null || lista.isEmpty()) {
+             res.maximo = 0;
+             res.minimo = 0;
+             res.cantidad = 0;
++
++
++
+             return res;
+         }
+ 
+-
+-        res.maximo = lista.stream()
+-                .max(Integer::compareTo)
+-                .orElse(0);
+-
+-
+-        res.minimo = lista.stream()
+-                .min(Integer::compareTo)
+-                .orElse(0);
+-
+-
++        res.maximo = lista.stream().max(Integer::compareTo).orElse(0);
++        res.minimo = lista.stream().min(Integer::compareTo).orElse(0);
+         res.cantidad = lista.size();
+ 
++
+         return res;
++
++
+     }
+ 
+     public static void main(String[] args) {
+         List<Integer> arr = List.of(45, 33, 345, 78, 7);
+-
+-        Resultado r = combinarResultados(arr);
+-        System.out.println(r);
++        System.out.println(combinarResultados(arr));
+     }
+ }
