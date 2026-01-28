@@ -42,6 +42,33 @@ Se trabajó de manera colaborativa realizando commits desde diferentes ramas, in
 **Descripción:**
 Como retos fue la organizacion entre los 3 como grupo para hacer todo con orden y trabajo simultaneo, teniendo en cuenta que en cada cambio realizamos el `git add .`, `git commit` y `git push`.
 
+---
+## Reto 4: Solucionar problemas con merge
+
+**Evidencia:**
+
+![retoscommits](https://github.com/user-attachments/assets/2d3862d1-2a4b-44f5-9b1b-7727570e2320)
+
+**Descripción:**
+Se trabajo de manera ordenada para cada uno de los demas retos, algunos pedian ver un conflicto de diferentes codigos con otro tipo de funciones los cuales buscaba solucionarse de manera colaborativa. 
+
+---
+
+## Acuerdos: 
+
+## Organizacion
+
+- Disponibilidad para reunirse los findes de semana
+- Aporte de ideas y trabajo colaborativo entre los 3 integrantes
+- No es malo no saber, siempre preguntar lo que no sepamos
+- Pausas activas, en el sentido de cuando nos encontremos estancados
+- Estar en constante aprendizaje, mandar funtes o libros para ayudar a nuestro conocimiento
+- Preguntar dudas a la profe cuando lo veamos necesario
+
+
+---
+
+
 
 
 
