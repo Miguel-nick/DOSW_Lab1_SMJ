@@ -54,6 +54,44 @@ Se trabajo de manera ordenada para cada uno de los demas retos, algunos pedian v
 
 ---
 
+## Preguntas Teoricas
+
+## 1. ¿Cuál es la diferencia entre git merge y git rebase?
+- git merge une dos ramas creando un commit de merge y conserva el historial.
+- git rebase reescribe el historial colocando los commits de una rama encima de otra, dejándolo lineal.
+## 2. Si dos ramas modifican la misma línea de un archivo, ¿qué sucede al hacer merge?
+- Git genera un conflicto de merge y obliga al usuario a resolverlo manualmente antes de completar el merge.
+## 3. ¿Cómo puedes ver gráficamente el historial de merges y ramas en consola?
+- Con el comando:
+- git log --oneline --graph --all
+## 4. Explica la diferencia entre un commit y un push.
+- Commit: guarda cambios localmente en el repositorio.
+- Push: envía esos commits al repositorio remoto (GitHub).
+## 5. ¿Para qué sirven git stash y git pop?
+- git stash: guarda cambios temporales sin hacer commit.
+- git stash pop: recupera esos cambios guardados.
+## 6. ¿Qué diferencia hay entre HashMap y HashTable?
+- HashMap: no es sincronizado, es más rápido, permite un valor null.
+- HashTable: es sincronizado, más lento, no permite null.
+## 7. ¿Qué ventajas tiene Collectors.toMap() frente a un bucle tradicional para llenar un mapa?
+- Código más corto y legible, uso de programación funcional y menos errores y mejor mantenimiento
+## 8. Si usas List con objetos y luego aplicas stream().map(), ¿qué tipo de operación estás haciendo?
+- Una operación de transformación, porque conviertes cada elemento del stream en otro.
+## 9. ¿Qué hace el método stream().filter() y qué retorna?
+- Filtra los elementos según una condición y retorna un nuevo stream con los elementos que la cumplen.
+## 10. Describe el paso a paso de cómo crear una rama desde develop si es una funcionalidad nueva.
+- git checkout develop
+- git pull
+- git checkout -b feature/nueva-funcionalidad
+## 11. ¿Cuál es la diferencia entre crear una rama con git branch y con git checkout -b?
+- git branch: solo crea la rama.
+- git checkout -b: crea la rama y cambia a ella inmediatamente.
+## 12. ¿Por qué es recomendable crear ramas feature/ para nuevas funcionalidades en lugar de trabajar en main directamente?
+- Porque permite evitar errores en main también trabajar de forma aislada facilitando pruebas y revisiones y mantener un historial limpio
+
+---
+
+
 ## Acuerdos: 
 
 ## Organizacion
