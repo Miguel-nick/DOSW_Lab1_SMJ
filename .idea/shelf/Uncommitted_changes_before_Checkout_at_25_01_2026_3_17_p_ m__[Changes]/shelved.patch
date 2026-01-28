@@ -1,0 +1,19 @@
+Index: Laboratorio1/reto2/CarreraParalela.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.List;\r\n\r\npublic class CarreraParalela {\r\n\r\n\r\n    public static class Resultado {\r\n        int maximo;\r\n        int minimo;\r\n        long cantidad;\r\n\r\n        @Override\r\n        public String toString() {\r\n            return \"Resultado{\" +\r\n                    \"maximo=\" + maximo +\r\n                    \", minimo=\" + minimo +\r\n                    \", cantidad=\" + cantidad +\r\n                    '}';\r\n        }\r\n    }\r\n\r\n    public static Resultado combinarResultados(List<Integer> lista) {\r\n        Resultado res = new Resultado();\r\n\r\n\r\n        if (lista == null || lista.isEmpty()) {\r\n            res.maximo = 0;\r\n            res.minimo = 0;\r\n            res.cantidad = 0;\r\n            return res;\r\n        }\r\n\r\n\r\n        res.maximo = lista.stream()\r\n                .max(Integer::compareTo)\r\n                .orElse(0);\r\n\r\n\r\n        res.minimo = lista.stream()\r\n                .min(Integer::compareTo)\r\n                .orElse(0);\r\n\r\n\r\n        res.cantidad = lista.size();\r\n\r\n        return res;\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        List<Integer> arr = List.of(45, 33, 345, 78, 7);\r\n\r\n        Resultado r = combinarResultados(arr);\r\n        System.out.println(r);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Laboratorio1/reto2/CarreraParalela.java b/Laboratorio1/reto2/CarreraParalela.java
+--- a/Laboratorio1/reto2/CarreraParalela.java	(revision 97a271bbc46c8cdcf727d63c40f0106d167044f4)
++++ b/Laboratorio1/reto2/CarreraParalela.java	(date 1769371604681)
+@@ -42,7 +42,7 @@
+ 
+         res.cantidad = lista.size();
+ 
+-        return res;
++        int valor = (res % 2 ==0)? return res :System.out.println("No es un numero par");
+     }
+ 
+     public static void main(String[] args) {

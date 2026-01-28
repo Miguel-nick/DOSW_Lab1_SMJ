@@ -1,0 +1,41 @@
+Index: src/Reto3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.function.Function;\r\nimport java.util.stream.IntStream;\r\n\r\npublic class Reto3 {\r\n\r\n    public static String tranformar(String mensaje) {\r\n        StringBuilder menB = new StringBuilder();\r\n        IntStream.range(0, 3)\r\n                .forEach(i -> {\r\n                    if (i > 0) menB.append(\" \");\r\n                    menB.append(mensaje);\r\n\r\n                });\r\n        return menB.toString();\r\n    }\r\n    public static void main(String[] args) {\r\n\r\n        Function<String, String> f = msg -> Reto3.tranformar(msg);\r\n        System.out.println(f.apply(\"Hola\"));\r\n\r\n\r\n\r\n\r\n    }\r\n\r\n}
+===================================================================
+diff --git a/src/Reto3.java b/src/Reto3.java
+--- a/src/Reto3.java	(revision 3956fa6db991e06161ae397e7eb295ac3da0f97a)
++++ b/src/Reto3.java	(date 1769478920827)
+@@ -13,14 +13,12 @@
+                 });
+         return menB.toString();
+     }
++
+     public static void main(String[] args) {
+ 
+         Function<String, String> f = msg -> Reto3.tranformar(msg);
+         System.out.println(f.apply("Hola"));
+ 
+ 
+-
+-
+     }
+-
+ }
+\ No newline at end of file
+Index: DOSW_Lab1_SMJ.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/DOSW_Lab1_SMJ.iml b/DOSW_Lab1_SMJ.iml
+--- a/DOSW_Lab1_SMJ.iml	(revision 3956fa6db991e06161ae397e7eb295ac3da0f97a)
++++ b/DOSW_Lab1_SMJ.iml	(date 1769478643699)
+@@ -7,5 +7,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
